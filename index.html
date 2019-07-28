@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screen Record By Mèo Máu Mặt</title>
+    <style>
+        body {
+            position: relative;
+            height: 620px;
+        }
+
+        #container {
+            position: absolute;
+            left: 50%; 
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+        }
+
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            line-height: normal;
+            white-space: nowrap;
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            height: 30px;
+            border: none;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* red */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* blue */
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div id="container">
+            <h1>Screen Recorder Very Simple</h1>
+            <video id="videoElement" width="500" autoplay muted></video>
+            <br />
+            <button id="captureBtn" class="button-secondary">Ready</button>
+            <button id="startBtn" class="button-success" disabled>Start Recording</button>
+            <button id="stopBtn" class="button-error" disabled>Stop Recording</button>
+            <p>Comming Soon:</p>
+            <input type="checkbox" id="audioToggle" disabled/>
+            <label for="audioToggle"><i>Record Audio from Desktop</i></label>
+            <input type="checkbox" id="micAudioToggle" disabled/>
+            <label for="micAudioToggle"><i>Record Audio from Microphone</i></label>
+            <h4><i>Các bạn sử dụng mà có phát hiện bug(lỗi) gì thì xin hãy báo lại cho mình tại <a href="https://www.facebook.com/HuuHung.IT">Facebook này nhé</a> hehehe :D</i></h4>
+
+            <a id="download" href="#" style="display: none;">Download</a>
+        </div>
+  </body>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="adapter-latest.js"></script>
+    <script src="record.js"></script>
+</body>
+</html>
